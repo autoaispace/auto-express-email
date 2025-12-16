@@ -1,0 +1,28 @@
+### 测试 1: 成功提交邮箱
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "source": "product-a-official-site",
+    "pageUrl": "https://product-a.com/features",
+    "referrer": "google.com"
+}
+
+### 测试 2: 缺少必填字段 (Source)
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{
+    "email": "test@example.com"
+}
+
+### 测试 3: 邮箱格式错误
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{
+    "email": "invalid-email-format",
+    "source": "product-b"
+}
+
