@@ -1,7 +1,7 @@
 ### 测试 1: 成功提交邮箱
 POST http://localhost:5000/api/subscribe
 Content-Type: application/json
-
+1
 {
     "email": "test@example.com",
     "source": "product-a-official-site",
